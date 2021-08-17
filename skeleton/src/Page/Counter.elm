@@ -2,6 +2,7 @@ module Page.Counter exposing (Model, Msg, init, update, view)
 
 import Data.Session exposing (Session)
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
 import Route
 
@@ -49,10 +50,10 @@ view _ model =
     , [ h1 [] [ text "Second page" ]
       , p [] [ text "This is the second page, featuring a counter." ]
       , p []
-            [ button [ onClick Dec ] [ text "-" ]
-            , strong [] [ text (String.fromInt model) ]
-            , button [ onClick Inc ] [ text "+" ]
-            , button [ onClick Reset ] [ text "reset" ]
+            [ button [ class "btn btn-primary me-2", onClick Dec ] [ text "-" ]
+            , strong [ class "me-2" ] [ text (String.fromInt model) ]
+            , button [ class "btn btn-primary me-2", onClick Inc ] [ text "+" ]
+            , button [ class "btn btn-primary me-2", onClick Reset ] [ text "reset" ]
             ]
       , p [] [ a [ Route.href Route.Home ] [ text "Back home" ] ]
       ]
