@@ -28,9 +28,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^8.1.0",
+    "elm": "^0.19.1-5",
     "fs-extra": "^10.0.0"
-  },
-  "devDependencies": {
-    "elm": "^0.19.1-5"
   }
 }
