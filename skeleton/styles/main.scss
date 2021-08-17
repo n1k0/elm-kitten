@@ -1,62 +1,45 @@
-:root {
-  --primary-color: #333;
-  --background-color: #b01246;
-  --secondary-color: #fafafa;
-  width:100%;
-  height:100%;
-  font: 1rem/1.125rem Lato, sans-serif;
-  color: var(--primary-color);
-  background: var(--secondary-color);
-}
+// Bootstrap colors
+$white: #fff;
+$body-color: #111;
+$dark: #333;
+$primary: #075ea2;
+$success: #167d2e;
+$info: #097182;
+$input-border-color: #969696;
+$navbar-dark-color: rgba($white, 0.8);
+$text-dark: #343a40;
+$text-muted: rgb(104, 104, 104);
+// Responsive texts
+$enable-responsive-font-sizes: true;
 
-* {
-  box-sizing: border-box;
-}
+// Viewports
+$viewport-xs: 320px;
+$viewport-sm: 576px;
+$viewport-md: 768px;
+$viewport-lg: 992px;
+$viewport-xl: 1200px;
 
-body {
-  width: 640px;
-  margin: 0 auto;
-}
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-header > h1 {
-  text-align: center;
-  margin: 1em 0;
-  color: var(--primary-color);
-  font-size: 60px;
-  line-height: 1px;
-}
-
-main {
-  padding: 10px;
-}
-
-nav {
-  text-align: center;
-}
-
-button {
-  font-size: 1.2rem;
-  margin: 0 10px;
-}
-
-.GithubIcon {
-  position: absolute;
-  top:15px;
-  right: 15px;
-  border: 1px solid rgba(255, 255, 255, .3);
-  border-radius: 4px;
-  color: #999;
-  text-decoration: none;
-
-  img {
-    width: 96px;
-    height: 96px;
-    float: left;
+.md-content {
+  h2 {
+    border-top: 1px solid #ccc;
+    font-size: 1.5em;
+    padding: 1em 0 .5em;
+    margin-top: 1em;
   }
 
-  span {
-    color: var(--primary-color);
-    display: block;
-    text-align: center;
+  blockquote {
+    color: $text-dark;
+    border-left: 5px solid #ccc;
+    font-style: italic;
+    padding-left: .5em;
+  }
+
+  pre {
+    background-color: rgb(14, 14, 36);
+    border-radius: 8px;
+    color: #fff;
+    padding: 1em;
   }
 }

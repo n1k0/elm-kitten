@@ -2,6 +2,7 @@ module Page.Home exposing (Model, Msg(..), init, update, view)
 
 import Data.Session exposing (Session)
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Http
 import Markdown
 import Request.Github as Github
@@ -53,6 +54,6 @@ view : Session -> Model -> ( String, List (Html Msg) )
 view _ model =
     ( "Home"
     , [ model.readme
-            |> Markdown.toHtml []
+            |> Markdown.toHtml [ class "md-content" ]
       ]
     )

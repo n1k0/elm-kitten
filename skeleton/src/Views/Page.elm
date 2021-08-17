@@ -3,7 +3,7 @@ module Views.Page exposing (ActivePage(..), Config, frame)
 import Browser exposing (Document)
 import Data.Session exposing (Session)
 import Html exposing (..)
-import Html.Attributes exposing (class, href, src)
+import Html.Attributes exposing (..)
 import Route
 
 
@@ -23,38 +23,32 @@ frame : Config -> ( String, List (Html msg) ) -> Document msg
 frame config ( title, content ) =
     { title = title ++ " | elm-kitten"
     , body =
-        [ viewHeader config
-        , main_ [] content
+        [ div []
+            [ navbar config
+            , main_ [ class "container mt-5" ] content
+            ]
         ]
     }
 
 
-viewHeader : Config -> Html msg
-viewHeader { activePage } =
+navbar : Config -> Html msg
+navbar { activePage } =
     let
         linkIf page route caption =
             if page == activePage then
-                strong [] [ text caption ]
+                text caption
 
             else
-                a [ Route.href route ] [ text caption ]
+                a [ class "text-light", Route.href route ] [ text caption ]
     in
-    header []
-        [ h1 [] [ text "elm-kitten" ]
-        , nav []
-            [ linkIf Home Route.Home "Home"
-            , text " | "
-            , linkIf Counter Route.Counter "Second page"
-            ]
-        , a
-            [ class "GithubIcon"
-            , Html.Attributes.target "_blank"
-            , href "https://github.com/n1k0/elm-kitten"
-            ]
-            [ img
-                [ src "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png"
-                ]
-                []
-            , span [] [ text "Github" ]
+    header [ class "navbar navbar-dark bg-dark text-light shadow-sm" ]
+        [ div [ class "container" ]
+            [ h1 [ class "display-5 fw-bold" ] [ text "elm-kitten" ]
+            , [ linkIf Home Route.Home "Home"
+              , linkIf Counter Route.Counter "Second page"
+              , a [ class "text-light", href "https://github.com/n1k0/elm-kitten" ] [ text "Github" ]
+              ]
+                |> List.intersperse (text " | ")
+                |> nav []
             ]
         ]

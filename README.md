@@ -10,12 +10,12 @@ This project has been forken from [elm kitchen](https://github.com/allo-media/el
 
 ## Features
 
-- Elm 0.19 ready
+- Elm 0.19.1 ready
 - Multiple pages navigation & routing, based on URL fragments
-- Live development server with hot reloading
+- [SASS](https://sass-lang.com/) support with [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/) integration
+- Live development server with hot reloading (Elm + SASS)
 - [elm-test](https://github.com/elm-community/elm-test) support
-- [SASS](https://sass-lang.com/) support
-- JavaScript build minification using UglifyJS.
+- JavaScript build minification & optimization using UglifyJS.
 
 ## Code organization
 
