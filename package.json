@@ -1,0 +1,33 @@
+{
+  "name": "elm-kitten",
+  "version": "5.0.0",
+  "description": "An utility to generate an Elm SPA skeleton, forked from elm-kitchen.",
+  "bin": {
+    "elm-kitten": "index.js"
+  },
+  "scripts": {
+    "test": "node index.js testapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1k0/elm-kitten.git"
+  },
+  "keywords": [
+    "elm",
+    "spa",
+    "bootstrap",
+    "cli",
+    "app"
+  ],
+  "author": "Nicolas Perriault <nicolas@perriaulmt.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n1k0/elm-kitten/issues"
+  },
+  "homepage": "https://github.com/n1k0/elm-kitten#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^8.1.0",
+    "fs-extra": "^10.0.0"
+  }
+}

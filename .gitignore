@@ -1,0 +1,7 @@
+elm-stuff
+node_modules
+/skeleton/build
+/skeleton/package-lock.json
+/skeleton/public/app.js
+/skeleton/public/main.css
+/skeleton/public/main.css.map
