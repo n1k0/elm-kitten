@@ -2,7 +2,7 @@
 
 ![build status](https://github.com/n1k0/elm-kitten/actions/workflows/node.js.yml/badge.svg)
 
-This project has been forked from [elm kitchen](https://github.com/allo-media/elm-kitten), which has been unmaintained for more than a year now.
+This project has been forked from [elm kitchen](https://github.com/allo-media/elm-kitchen), which has been unmaintained for more than a year now.
 
 > This is a modest attempt at providing a simplistic yet opinionated Elm [SPA](https://en.wikipedia.org/wiki/Single-page_application) application skeleton based on rtfeldman's [Elm Example SPA](https://github.com/rtfeldman/elm-spa-example/), for [Allo-Media](http://tech.allo-media.net/)'s own needs.
 
